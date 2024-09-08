@@ -2,7 +2,9 @@
   "name": "@nx-next-shadcn/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run web:serve-static"
+  },
   "private": true,
   "devDependencies": {
     "@nx/devkit": "19.5.3",
