@@ -5,5 +5,23 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project web --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/web",
+        "root": "apps/web",
+        "fileReplacements": [],
+        "nextConfig": "apps/web/next.config.js"
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "web:build",
+        "dev": true
+      }
+    }
+  }
 }
